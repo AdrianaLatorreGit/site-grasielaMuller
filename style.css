@@ -1313,6 +1313,10 @@ nav {
         display: none;
     }
 
+    .cursor {
+        display: none;
+    }
+
     .about {
         padding: 60px 20px;
     }
