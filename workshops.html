@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Workshops - Grasiela Muller</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="cursor"></div>
+
+        <header>
+            <nav>
+                <a href="index.html" style="text-decoration: none"
+                    ><div class="logo">Grasiela Muller</div></a
+                >
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="heroCover">
+            <div class="heroCover-content">
+                <h1>Oficinas</h1>
+                <p>
+                    Espaços de criação, aprendizado e desenvolvimento.
+                    <br />
+                    Atividades que estimulam a expressão, a escuta e o trabalho
+                    coletivo, promovendo experiências artísticas e culturais
+                    significativas.
+                </p>
+            </div>
+        </section>
+
+        <section class="workshops" id="workshops">
+            <div class="workshops-container">
+                <!-- Teatro Musical -->
+                <div class="project-section fade-in">
+                    <div class="project-header">
+                        <h3 class="project-title">Teatro de formas animadas</h3>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-description">
+                            <p class="project-text">
+                                Uma atividade artística que propõe ao público o
+                                contato com o Teatro de Formas Animadas, um
+                                género teatral representado por: marionetas,
+                                bonecos, máscaras, sombras, objetos, música e
+                                movimentos.
+                            </p>
+                            <p class="project-text">
+                                Através de atividades divertidas e lúdicas, os
+                                participantes podem experimentar formas e
+                                movimentos, bem como, conhecer técnicas que
+                                transmitem sentimentos e intenções nas próprias
+                                marionetas, criando assim, a ilusão de “estarem
+                                vivas”, com o objetivo de trazer à tona a
+                                poesia, a criatividade, coordenação motora e a
+                                reflexão sobre o material trabalhado. Conteúdos
+                                a abordar: Investigar a expressividade do corpo
+                                e dos materiais;
+                            </p>
+
+                            <p class="project-text">
+                                Transferência de energia (movimento) através do
+                                corpo da pessoa para o objeto ( marionete);
+                                Pesquisar as possibilidades de gestos
+                                expressivos e a precisão do gesto com diferentes
+                                dinâmicas. Foco, olhar e triangulação. Eixo,
+                                peso, texturas e densidade dos materiais;
+                                Improvisação, brincadeiras, jogos lúdicos sobre
+                                temas e sentimentos para transpor para as
+                                marionetas Como transformar histórias em signos
+                                e personagens de animação.
+                            </p>
+                        </div>
+
+                        <div class="media-gallery">
+                            <div
+                                class="thumbnail-gallery"
+                                data-gallery="formasAnimadas"
+                            >
+                                <div
+                                    class="thumbnail"
+                                    data-type="image"
+                                    data-src="/img/formasAnimadas/1.png"
+                                >
+                                    <img
+                                        src="/img/formasAnimadas/1.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail"
+                                    data-type="image"
+                                    data-src="/img/formasAnimadas/2.png"
+                                >
+                                    <img
+                                        src="/img/formasAnimadas/2.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail"
+                                    data-type="image"
+                                    data-src="/img/formasAnimadas/3.png"
+                                >
+                                    <img
+                                        src="/img/formasAnimadas/3.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail"
+                                    data-type="image"
+                                    data-src="/img/formasAnimadas/4.png"
+                                >
+                                    <img
+                                        src="/img/formasAnimadas/4.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail"
+                                    data-type="image"
+                                    data-src="/img/formasAnimadas/5.png"
+                                >
+                                    <img
+                                        src="/img/formasAnimadas/5.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail video"
+                                    data-type="video"
+                                    data-src="https://www.youtube.com/watch?v=N8616aV33HA&t=8s&ab_channel=GrasielaM%C3%BCller"
+                                >
+                                    <img
+                                        src="/img//formasAnimadas/video1.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para mídia -->
+        <div class="media-modal" id="mediaModal">
+            <div class="modal-content">
+                <button class="close-modal" onclick="closeMediaModal()">
+                    &times;
+                </button>
+                <button
+                    class="modal-nav prev"
+                    id="prevBtn"
+                    onclick="navigateMedia(-1)"
+                >
+                    ‹
+                </button>
+                <button
+                    class="modal-nav next"
+                    id="nextBtn"
+                    onclick="navigateMedia(1)"
+                >
+                    ›
+                </button>
+
+                <img
+                    class="modal-media"
+                    id="modalImage"
+                    style="display: none"
+                />
+                <video
+                    class="modal-media"
+                    id="modalVideo"
+                    controls
+                    style="display: none"
+                >
+                    <source src="" type="video/mp4" />
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+                <div class="modal-counter" id="modalCounter"></div>
+            </div>
+        </div>
+
+        <script>
+            // Variáveis globais para o modal
+            let currentGallery = [];
+            let currentIndex = 0;
+
+            // Cursor personalizado
+            const cursor = document.querySelector('.cursor');
+            let mouseX = 0,
+                mouseY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursor.style.left = mouseX + 'px';
+                cursor.style.top = mouseY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Hover effect no cursor
+            const hoverElements = document.querySelectorAll(
+                'a, button, .thumbnail, .main-media'
+            );
+            hoverElements.forEach((el) => {
+                el.addEventListener('mouseenter', () =>
+                    cursor.classList.add('hover')
+                );
+                el.addEventListener('mouseleave', () =>
+                    cursor.classList.remove('hover')
+                );
+            });
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px',
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 2px 25px rgba(0, 0, 0, 0.15)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                }
+            });
+
+            // Inicializar event listeners para thumbnails
+            function initializeThumbnails() {
+                document
+                    .querySelectorAll('.thumbnail-gallery')
+                    .forEach((gallery) => {
+                        const thumbnails =
+                            gallery.querySelectorAll('.thumbnail');
+
+                        thumbnails.forEach((thumbnail, index) => {
+                            thumbnail.addEventListener('click', () => {
+                                const galleryName =
+                                    gallery.getAttribute('data-gallery');
+                                openMediaModal(galleryName, index);
+                            });
+                        });
+                    });
+            }
+
+            // Abrir modal com navegação
+            function openMediaModal(galleryName, startIndex = 0) {
+                const gallery = document.querySelector(
+                    `[data-gallery="${galleryName}"]`
+                );
+                const thumbnails = gallery.querySelectorAll('.thumbnail');
+
+                // Preparar array da galeria atual
+                currentGallery = Array.from(thumbnails).map((thumb) => ({
+                    type: thumb.getAttribute('data-type'),
+                    src: thumb.getAttribute('data-src'),
+                    alt: thumb.querySelector('img').alt,
+                }));
+
+                currentIndex = startIndex;
+
+                const modal = document.getElementById('mediaModal');
+                modal.classList.add('active');
+
+                showCurrentMedia();
+                updateNavigationButtons();
+                updateCounter();
+            }
+
+            // Mostrar mídia atual
+            function showCurrentMedia() {
+                const modalImage = document.getElementById('modalImage');
+                const modalVideo = document.getElementById('modalVideo');
+                const modalContent = document.querySelector('.modal-content');
+                const currentMedia = currentGallery[currentIndex];
+
+                // Remover qualquer iframe existente
+                const existingIframe =
+                    document.querySelector('.youtube-iframe');
+                if (existingIframe) {
+                    existingIframe.remove();
+                }
+
+                if (currentMedia.type === 'video') {
+                    modalImage.style.display = 'none';
+                    modalVideo.style.display = 'none';
+
+                    // Verificar se é um vídeo do YouTube
+                    if (
+                        currentMedia.src.includes('youtube') ||
+                        currentMedia.src.includes('youtu.be')
+                    ) {
+                        // Extrair o ID do vídeo do YouTube
+                        let videoId = '';
+                        const youtubeUrl = currentMedia.src;
+
+                        if (youtubeUrl.includes('youtube.com/watch?v=')) {
+                            videoId = youtubeUrl.split('v=')[1];
+                            const ampersandPosition = videoId.indexOf('&');
+                            if (ampersandPosition !== -1) {
+                                videoId = videoId.substring(
+                                    0,
+                                    ampersandPosition
+                                );
+                            }
+                        } else if (youtubeUrl.includes('youtu.be/')) {
+                            videoId = youtubeUrl.split('youtu.be/')[1];
+                        }
+
+                        // Criar iframe do YouTube
+                        const iframe = document.createElement('iframe');
+                        iframe.classList.add('youtube-iframe', 'modal-media');
+                        iframe.setAttribute(
+                            'src',
+                            `https://www.youtube.com/embed/${videoId}?autoplay=1`
+                        );
+                        iframe.setAttribute('frameborder', '0');
+                        iframe.setAttribute('allowfullscreen', '');
+                        iframe.setAttribute(
+                            'allow',
+                            'autoplay; encrypted-media'
+                        );
+
+                        // Inserir o iframe antes do contador
+                        const counter = document.getElementById('modalCounter');
+                        modalContent.insertBefore(iframe, counter);
+                    } else {
+                        // Para vídeos normais (não YouTube)
+                        modalVideo.style.display = 'block';
+                        modalVideo.src = currentMedia.src;
+                        modalVideo.play();
+                    }
+                } else {
+                    modalImage.style.display = 'block';
+                    modalImage.src = currentMedia.src;
+                    modalImage.alt = currentMedia.alt;
+                }
+            }
+
+            // Navegar entre mídias
+            function navigateMedia(direction) {
+                const modalVideo = document.getElementById('modalVideo');
+                modalVideo.pause();
+
+                currentIndex += direction;
+
+                if (currentIndex < 0) {
+                    currentIndex = currentGallery.length - 1;
+                } else if (currentIndex >= currentGallery.length) {
+                    currentIndex = 0;
+                }
+
+                showCurrentMedia();
+                updateNavigationButtons();
+                updateCounter();
+            }
+
+            // Atualizar botões de navegação
+            function updateNavigationButtons() {
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+
+                prevBtn.disabled = currentGallery.length <= 1;
+                nextBtn.disabled = currentGallery.length <= 1;
+            }
+
+            // Atualizar contador
+            function updateCounter() {
+                const counter = document.getElementById('modalCounter');
+                counter.textContent = `${currentIndex + 1} / ${
+                    currentGallery.length
+                }`;
+            }
+
+            // Fechar modal
+            function closeMediaModal() {
+                const modal = document.getElementById('mediaModal');
+                const modalVideo = document.getElementById('modalVideo');
+                const existingIframe =
+                    document.querySelector('.youtube-iframe');
+
+                if (existingIframe) {
+                    existingIframe.remove();
+                }
+
+                modal.classList.remove('active');
+                modalVideo.pause();
+                modalVideo.currentTime = 0;
+                currentGallery = [];
+                currentIndex = 0;
+            }
+
+            // Fechar modal clicando fora
+            document
+                .getElementById('mediaModal')
+                .addEventListener('click', (e) => {
+                    if (e.target.classList.contains('media-modal')) {
+                        closeMediaModal();
+                    }
+                });
+
+            // Navegação por teclado
+            document.addEventListener('keydown', (e) => {
+                if (
+                    document
+                        .getElementById('mediaModal')
+                        .classList.contains('active')
+                ) {
+                    switch (e.key) {
+                        case 'Escape':
+                            closeMediaModal();
+                            break;
+                        case 'ArrowLeft':
+                            navigateMedia(-1);
+                            break;
+                        case 'ArrowRight':
+                            navigateMedia(1);
+                            break;
+                    }
+                }
+            });
+
+            // Smooth scrolling para links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(
+                        this.getAttribute('href')
+                    );
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                        });
+                    }
+                });
+            });
+
+            // Inicializar thumbnails quando a página carregar
+            document.addEventListener('DOMContentLoaded', initializeThumbnails);
+        </script>
+    </body>
+</html>
