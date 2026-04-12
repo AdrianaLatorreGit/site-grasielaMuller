@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
@@ -12,7 +12,12 @@
         <header>
             <nav>
                 <div class="logo">Grasiela Müller</div>
-                <ul class="nav-links">
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#gallery">Projetos</a></li>
@@ -148,59 +153,117 @@
             </div>
         </section>
 
-        <footer class="dynamic-footer" id="contact">
-            <div class="decorative-elements">
-                <div class="star">✦</div>
-                <div class="star">✧</div>
-                <div class="star">✦</div>
-            </div>
+        <footer class="gf" id="contact">
+            <div class="gf-stripe"></div>
+            <canvas id="gf-canvas"></canvas>
+            <div class="gf-sparks" id="gf-sparks"></div>
 
-            <div class="footer-container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <h3 class="footer-title">Me escreva!</h3>
-                        <img
-                            src="img/gallery/contato.png"
-                            alt="Artista Circense"
-                        />
-                    </div>
-
-                    <div class="footer-contact">
-                        <ul class="contact-list">
-                            <li>
-                                <a
-                                    href="mailto:grasielamullermuller.com.br"
-                                    class="contact-link"
-                                >
-                                    <span class="contact-icon">✉</span>
-                                    grasielamullermuller.com.br
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="tel:+35111915660583"
-                                    class="contact-link"
-                                >
-                                    <span class="contact-icon">📞</span>
-                                    +351 11 915 660 583
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://instagram.com/grasiela_muller"
-                                    target="_blank"
-                                    class="contact-link"
-                                >
-                                    <span class="contact-icon">📷</span>
-                                    @grasiela_muller
-                                </a>
-                            </li>
-                        </ul>
+            <div class="gf-inner">
+                <div class="gf-left">
+                    <span class="gf-label">Entre em contato</span>
+                    <h2 class="gf-name">Grasiela<br />Müller</h2>
+                    <div class="gf-roles">
+                        <span class="gf-role"
+                            >Palhaça & Artista & Teatreira</span
+                        >
+                        <span class="gf-role">Musicista & Acordeonista</span>
                     </div>
                 </div>
 
-                <div class="footer-bottom">
-                    <p class="copyright">© 2025 Grasiela Müller</p>
+                <div class="gf-center">
+                    <div class="gf-avatar-ring">
+                        <svg
+                            class="gf-ring-svg"
+                            viewBox="0 0 170 170"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="85"
+                                cy="85"
+                                r="78"
+                                stroke="url(#rg)"
+                                stroke-width="2"
+                                stroke-dasharray="10 8"
+                                stroke-linecap="round"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="rg"
+                                    x1="0"
+                                    y1="0"
+                                    x2="170"
+                                    y2="170"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0%" stop-color="#ff6b9d" />
+                                    <stop offset="50%" stop-color="#ffa726" />
+                                    <stop offset="100%" stop-color="#ab47bc" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img
+                            class="gf-avatar-img"
+                            src="/img/gallery/contato.png"
+                            alt="Grasiela Müller"
+                            onerror="
+                                this.style.background =
+                                    'linear-gradient(135deg,#ff6b9d,#ab47bc)';
+                                this.removeAttribute('src');
+                            "
+                        />
+                    </div>
+                    <span class="gf-cta-hint">✦ vamos nos encontrar ✦</span>
+                </div>
+
+                <div class="gf-right">
+                    <a
+                        href="mailto:grasiela@muller.com.br"
+                        class="gf-pill email"
+                    >
+                        <div class="gf-pill-icon">✉</div>
+                        grasiela@muller.com.br
+                    </a>
+                    <a href="tel:+351915660583" class="gf-pill phone">
+                        <div class="gf-pill-icon">☎</div>
+                        +351 915 660 583
+                    </a>
+                    <a
+                        href="https://instagram.com/grasiela_muller"
+                        target="_blank"
+                        class="gf-pill insta"
+                    >
+                        <div
+                            class="gf-pill-icon"
+                            style="display: flex; align-items: center"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM17.5 6.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5A3.5 3.5 0 1 0 12 15.5 3.5 3.5 0 0 0 12 8.5Z"
+                                />
+                            </svg>
+                        </div>
+                        @grasiela_muller
+                    </a>
+                </div>
+            </div>
+
+            <div class="gf-divider"><div class="gf-divider-line"></div></div>
+
+            <div class="gf-bottom">
+                <p class="gf-copy">
+                    © 2026 Grasiela Müller — Feita de palcos, sons e afetos
+                </p>
+                <div class="gf-dots">
+                    <div class="gf-dot"></div>
+                    <div class="gf-dot"></div>
+                    <div class="gf-dot"></div>
                 </div>
             </div>
         </footer>
