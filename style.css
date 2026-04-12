@@ -1231,6 +1231,13 @@ canvas#gf-canvas {
     transition: all 0.3s ease;
 }
 
+.gf-pill.email .gf-pill-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .gf-pill:hover .gf-pill-icon {
     background: rgba(255, 107, 157, 0.2);
     border-color: rgba(255, 107, 157, 0.4);
