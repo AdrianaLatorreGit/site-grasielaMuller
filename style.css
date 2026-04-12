@@ -1233,9 +1233,6 @@ canvas#gf-canvas {
 
 .gf-pill.email .gf-pill-icon {
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .gf-pill:hover .gf-pill-icon {
