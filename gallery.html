@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
@@ -49,6 +49,17 @@
                                 >
                                     <img
                                         src="/img/gallery/1.png"
+                                        alt="Img-expo"
+                                    />
+                                </div>
+
+                                <div
+                                    class="thumbnail-mirrow"
+                                    data-type="image"
+                                    data-src="/img/gallery/retratos-insubmissa_04.jpg"
+                                >
+                                    <img
+                                        src="/img/gallery/retratos-insubmissa_04.jpg"
                                         alt="Img-expo"
                                     />
                                 </div>
@@ -531,14 +542,14 @@
 
             // Hover effect no cursor
             const hoverElements = document.querySelectorAll(
-                'a, button, .thumbnail, .main-media'
+                'a, button, .thumbnail, .main-media',
             );
             hoverElements.forEach((el) => {
                 el.addEventListener('mouseenter', () =>
-                    cursor.classList.add('hover')
+                    cursor.classList.add('hover'),
                 );
                 el.addEventListener('mouseleave', () =>
-                    cursor.classList.remove('hover')
+                    cursor.classList.remove('hover'),
                 );
             });
 
@@ -593,7 +604,7 @@
             // Abrir modal com navegação
             function openMediaModal(galleryName, startIndex = 0) {
                 const gallery = document.querySelector(
-                    `[data-gallery="${galleryName}"]`
+                    `[data-gallery="${galleryName}"]`,
                 );
                 const thumbnails =
                     gallery.querySelectorAll('.thumbnail-mirrow');
@@ -648,7 +659,7 @@
                             if (ampersandPosition !== -1) {
                                 videoId = videoId.substring(
                                     0,
-                                    ampersandPosition
+                                    ampersandPosition,
                                 );
                             }
                         } else if (youtubeUrl.includes('youtu.be/')) {
@@ -660,13 +671,13 @@
                         iframe.classList.add('youtube-iframe', 'modal-media');
                         iframe.setAttribute(
                             'src',
-                            `https://www.youtube.com/embed/${videoId}?autoplay=1`
+                            `https://www.youtube.com/embed/${videoId}?autoplay=1`,
                         );
                         iframe.setAttribute('frameborder', '0');
                         iframe.setAttribute('allowfullscreen', '');
                         iframe.setAttribute(
                             'allow',
-                            'autoplay; encrypted-media'
+                            'autoplay; encrypted-media',
                         );
 
                         // Inserir o iframe antes do contador
@@ -773,7 +784,7 @@
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(
-                        this.getAttribute('href')
+                        this.getAttribute('href'),
                     );
                     if (target) {
                         target.scrollIntoView({
