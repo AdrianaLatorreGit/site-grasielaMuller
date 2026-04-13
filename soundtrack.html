@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
@@ -934,145 +934,6 @@
             </div>
         </section>
 
-        <section class="workshops" id="workshops">
-            <div class="workshops-container">
-                <div class="project-section fade-in">
-                    <div class="project-header">
-                        <h3 class="project-title">Publicidade / Curtas</h3>
-                    </div>
-
-                    <div
-                        class="projects-grid"
-                        style="
-                            display: grid;
-                            grid-template-columns: repeat(
-                                auto-fit,
-                                minmax(280px, 1fr)
-                            );
-                            margin-top: -4rem;
-                            justify-items: center;
-                            gap: 20px;
-                            width: 100%;
-                            padding: 5px;
-                            box-sizing: border-box;
-                        "
-                    >
-                        <div
-                            class="project-card"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                width: 100%;
-                                max-width: 300px;
-                                background: #f8f8f8;
-                                border-radius: 8px;
-                                overflow: hidden;
-                                margin-top: 1rem;
-                            "
-                        >
-                            <div
-                                class="project-text"
-                                style="
-                                    padding: 12px;
-                                    text-align: center;
-                                    font-size: 0.9rem;
-                                    line-height: 1.3;
-                                    min-height: 60px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin-bottom: -0.5rem;
-                                "
-                            >
-                                <p style="margin: 0">
-                                    Curta vencedor do festival "24 horas" Rio de
-                                    Janeiro- Brasil
-                                </p>
-                            </div>
-
-                            <div
-                                class="thumbnail-gallery"
-                                data-gallery="soundtrack14"
-                            >
-                                <div
-                                    class="thumbnail video"
-                                    style="width: 100%; aspect-ratio: 16/9"
-                                    data-type="video"
-                                    data-src="https://www.youtube.com/watch?v=_XqIjaKMrFk&ab_channel=GrasielaM%C3%BCller"
-                                >
-                                    <img
-                                        src="/img/soundtrack/video14.png"
-                                        alt="Img-expo"
-                                        style="
-                                            width: 100%;
-                                            height: 100%;
-                                            object-fit: cover;
-                                        "
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="project-card"
-                            style="
-                                display: flex;
-                                flex-direction: column;
-                                width: 100%;
-                                max-width: 300px;
-                                background: #f8f8f8;
-                                border-radius: 8px;
-                                overflow: hidden;
-                                margin-top: 1rem;
-                            "
-                        >
-                            <div
-                                class="project-text"
-                                style="
-                                    padding: 12px;
-                                    text-align: center;
-                                    font-size: 0.9rem;
-                                    line-height: 1.3;
-                                    min-height: 60px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin-bottom: -0.5rem;
-                                "
-                            >
-                                <p style="margin: 0">
-                                    Publicidade feita para a STCP, transporte
-                                    público da cidade do Porto, Portugal
-                                </p>
-                            </div>
-
-                            <div
-                                class="thumbnail-gallery"
-                                data-gallery="soundtrack99"
-                            >
-                                <div
-                                    class="thumbnail video"
-                                    style="width: 100%; aspect-ratio: 16/9"
-                                    data-type="video"
-                                    data-src="https://www.youtube.com/watch?v=13qbJ0aBrM4&ab_channel=GrasielaM%C3%BCller"
-                                >
-                                    <img
-                                        src="/img/soundtrack/video16.png"
-                                        alt="Img-expo"
-                                        style="
-                                            width: 100%;
-                                            height: 100%;
-                                            object-fit: cover;
-                                        "
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Modal para mídia -->
         <div class="media-modal" id="mediaModal">
             <div class="modal-content">
@@ -1137,14 +998,14 @@
 
             // Hover effect no cursor
             const hoverElements = document.querySelectorAll(
-                'a, button, .thumbnail, .main-media'
+                'a, button, .thumbnail, .main-media',
             );
             hoverElements.forEach((el) => {
                 el.addEventListener('mouseenter', () =>
-                    cursor.classList.add('hover')
+                    cursor.classList.add('hover'),
                 );
                 el.addEventListener('mouseleave', () =>
-                    cursor.classList.remove('hover')
+                    cursor.classList.remove('hover'),
                 );
             });
 
@@ -1199,7 +1060,7 @@
             // Abrir modal com navegação
             function openMediaModal(galleryName, startIndex = 0) {
                 const gallery = document.querySelector(
-                    `[data-gallery="${galleryName}"]`
+                    `[data-gallery="${galleryName}"]`,
                 );
                 const thumbnails = gallery.querySelectorAll('.thumbnail');
 
@@ -1253,7 +1114,7 @@
                             if (ampersandPosition !== -1) {
                                 videoId = videoId.substring(
                                     0,
-                                    ampersandPosition
+                                    ampersandPosition,
                                 );
                             }
                         } else if (youtubeUrl.includes('youtu.be/')) {
@@ -1265,13 +1126,13 @@
                         iframe.classList.add('youtube-iframe', 'modal-media');
                         iframe.setAttribute(
                             'src',
-                            `https://www.youtube.com/embed/${videoId}?autoplay=1`
+                            `https://www.youtube.com/embed/${videoId}?autoplay=1`,
                         );
                         iframe.setAttribute('frameborder', '0');
                         iframe.setAttribute('allowfullscreen', '');
                         iframe.setAttribute(
                             'allow',
-                            'autoplay; encrypted-media'
+                            'autoplay; encrypted-media',
                         );
 
                         // Inserir o iframe antes do contador
@@ -1378,7 +1239,7 @@
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const target = document.querySelector(
-                        this.getAttribute('href')
+                        this.getAttribute('href'),
                     );
                     if (target) {
                         target.scrollIntoView({
